@@ -1,20 +1,19 @@
 name: Hi Mascot
 on: push
 env:
-  mascot: Mona
-  super_duper_var: totally_awesome
+  mascot: "Workflow Mascot"
 
 jobs:
   windows_job:
     runs-on: windows-latest
     steps:
-      - run: echo 'Hi ${{ env.mascot }}'  # Hi Mona
-      - run: echo 'Hi ${{ env.mascot }}'  # Hi Octocat
+      - run: echo 'Hi ${{ env.mascot }}'  
+      - run: echo 'Hi ${{ env.mascot }}'  
         env:
-          mascot: Octocat
+          mascot: "Windows Octocat"
   linux_job:
     runs-on: ubuntu-latest
     env:
-      mascot: Tux
+      mascot: "Linux Octocat"
     steps:
-      - run: echo 'Hi ${{ env.mascot }}'  # Hi Tux
+      - run: echo 'Hi ${{ env.mascot }}'
