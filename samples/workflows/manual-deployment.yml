@@ -18,6 +18,7 @@ on:
 jobs:
   Deploy_Apps:
     runs-on: ubuntu-latest
+    environment: production
     steps:
     - run: |
         echo "Running deployment of branch ${{ github.event.inputs.branch }}!"
